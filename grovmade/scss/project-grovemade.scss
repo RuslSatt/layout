@@ -1,0 +1,49 @@
+//? zero style                                             //
+@import "_style";
+//? adaptive fonts                                         //
+@import "_adaptive__fonts";
+//? fonts                                                  //
+@import "_fonts";
+//? header                                                 //
+@import "_header";
+//? screen                                                 //
+@import "_screen";
+//? text                                                   //
+@import "_text";
+//? card-image                                             //
+@import "_card-image";
+//? swiper                                                 //
+@import "_swiper";
+//? home-office                                                 //
+@import "_home-office";
+//? hard-way                                                 //
+@import "_hard-way";
+//? grid                                                 //
+@import "_grid";
+//? text-2                                                 //
+@import "_text-2";
+//? block-text                                                 //
+@import "_block-text";
+//? footer                                                 //
+@import "_footer";
+
+body {
+   font-family: "Roboto", sans-serif;
+}
+.grovamade {
+   min-height: 100vh;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   max-width: 1440px;
+   margin: 0px auto;
+}
+.content {
+   flex: 1 1 auto;
+}
+// *container                    //
+.container {
+   max-width: 1390px;
+   margin: 0px auto;
+}
+//*                              //

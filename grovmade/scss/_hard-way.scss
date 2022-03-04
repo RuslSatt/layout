@@ -1,0 +1,48 @@
+.hard {
+   padding: 80px 0 0 0;
+   @media (max-width: 768px) {
+      padding: 20px 0 0 0;
+   }
+}
+.hard__container {
+   max-width: 1052px;
+   margin: 0px auto;
+}
+.hard__content {
+   max-width: 777px;
+   margin: 0px auto;
+   text-align: center;
+   padding: 40px 10px 25px 10px;
+}
+.hard__title {
+   font-size: 34px;
+   line-height: 36px;
+   margin: 0 0 23px 0;
+   @include adaptive-fonts (34, 20);
+   @media (max-width: 768px) {
+      margin: 0 0 15px 0;
+      line-height: 25px;
+   }
+   @media (max-width: 500px) {
+      margin: 0 0 10px 0;
+      line-height: 20px;
+   }
+}
+.hard__text {
+   color: #A0A0A0;
+   font-size: 16px;
+   line-height: 24px;
+   letter-spacing: 0.8px;
+}
+.hard__image {
+   position: relative;
+   padding: 0 0 50% 0;
+   img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}

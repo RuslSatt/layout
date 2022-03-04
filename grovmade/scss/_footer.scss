@@ -1,0 +1,118 @@
+.footer {
+   background-color: #f9f9f9;
+}
+.footer__nav {
+   position: relative;
+   display: flex;
+}
+.footer__column {
+   padding: 80px 10px;
+   display: flex;
+   gap: 40px;
+   @media (max-width: 768px) {
+      padding: 20px 10px;
+      gap: 20px;
+   }
+   @media (max-width: 500px) {
+      flex-direction: column;
+      padding: 15px 10px;
+      gap: 10px;
+   }
+}
+.footer__link {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.footer__link-search {
+   a{
+      color: #000;
+      font-size: 22px;
+      line-height: 24px;
+      padding: 5px;
+      @include adaptive-fonts(22, 16);
+      transition: 0.5s;
+   }
+   a:hover {
+      background-color: rgba(0, 255, 255, 0.144);
+      border-radius: 10px;
+   }
+}
+.footer__boxtext {
+   flex: 0 1 25%;
+   min-width: 320px;
+   max-height: 180px;
+   border-bottom: 1px solid #000;
+   @media (max-width: 768px) {
+      flex: 0 1 50%;
+      min-width: 260px;
+   }
+}
+.footer__title {
+   a{
+      color: #000;
+      transition: 1s;
+   }
+   a:hover{
+      border-bottom: 1px solid #000;
+   }
+   font-size: 22px;
+   line-height: 24px;
+   margin: 0 0 23px 0;
+   @include adaptive-fonts(22, 16);
+   @media (max-width: 500px) {
+      text-align: right;
+   }
+}
+.footer__text {
+   color: rgba(160, 160, 160, 1);
+   letter-spacing: 0.8px;
+   line-height: 16px;
+   position: relative;
+   padding: 0 0 10px 0;
+}
+
+.footer__go-up {
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 20px 30px;
+   text-transform: uppercase;
+   background-color: #000;
+   color: #fff;
+   transition: 2s;
+   &:hover {
+      background-color: rgba(0, 255, 255, 0.541);
+      color: black;
+      transform-origin: top left;
+      transform: rotate(45deg);
+   }
+}
+
+.footer__foot {
+   display: flex;
+   gap: 30px;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 30px 10px;
+   @media (max-width: 768px) {
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 10px 25px 0;
+   }
+   @media (max-width: 450px) {
+      flex-direction: column;
+      padding: 0px 10px 25px 0;
+   }
+   p {
+      color: #707a7f;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.8px;
+      @media (max-width: 768px) {
+         flex: 0 1 30%;
+      }
+   }
+}

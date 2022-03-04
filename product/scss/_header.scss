@@ -1,0 +1,115 @@
+.header {
+   padding: 0px 10px 0px 10px;
+   background: #E5E5E5;
+}
+
+.header__row {
+   min-height: 80px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   @media (max-width: 1136px) {
+      justify-content: center;
+      padding: 10px 0px 0px 0px;
+   }
+}
+
+.header__item {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   @media (max-width: 945px) {
+      margin: 0px 0px 20px 0px;
+   }
+}
+
+.header__logo {
+   margin: 0px 16px 0px 0px;
+}
+.header__logo-text {
+   color: #173A56;
+   font-weight: bold;
+   font-size: 30px;
+   line-height: 28px;
+   margin: 0px 16px 0px 0px;
+   @media (max-width: 944px) {
+      margin: 0px 0px 0px 0px;
+   }
+}
+.header__nav {
+   @media (max-width: 768px) {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0px 0px 20px 0px;
+      text-align: center;
+   }
+}
+.header__list {
+   margin: 0px 25px 0px 0px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.header__link {
+   color: #22343D;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 28px;
+   margin: 0px 0px 0px 25px;
+   transition: 0.3s;
+   &:hover{
+      color: #000;
+      font-weight: 600;
+   }
+}
+.header__buttons {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   margin: 0px 25px 0px 0px;
+   @media (max-width: 768px) {
+      flex: 1 1 100%;
+      margin: 0px 0px 10px 0px;
+   }
+   a{
+      margin: 0px 0px 0px 25px;
+   }
+   a:first-child{
+      margin: 0px 0px 0px 0px;
+   }
+}
+.header__btn {
+   color: #173A56;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 24px;
+   padding: 10px 25px;
+   border: 1px solid #BCD0E5;
+   border-radius: 4px;
+   transition: 0.3s;
+   &:hover{
+      background: #02897A;
+      color: #fff;
+   }
+}
+.header__icon {
+   display: block;
+   padding: 6px 6px;
+   background: #F3F3F3;
+   border-radius: 100px;
+   transition: 0.3s;
+   &:hover{
+      background: #cfe6e3;
+   }
+}
+.header__icons{
+   @media (max-width: 768px) {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0px 6px 0px 0px;
+   }
+}

@@ -1,0 +1,90 @@
+//? zero style                                             //
+@import "_style";
+//? adaptive fonts                                         //
+@import "_mixin-code";
+//? fonts                                                  //
+@import "_fonts";
+//? sample                                                 //
+@import "_code-template";
+//? header                                                 //
+@import "_header";
+//? start                                                 //
+@import "_start";
+//? col-product                                                 //
+@import "_col-product";
+//? block-image-one                                                 //
+@import "_manag";
+//? block-image-two                                                 //
+@import "_custom";
+//? block-image-three                                                 //
+@import "_manag-reverse";
+//? process                                                 //
+@import "_process";
+//? card                                                 //
+@import "_card";
+//? price                                                 //
+@import "_price";
+//? say                                                 //
+@import "_say";
+//? join                                                 //
+@import "_join";
+//? footer                                                 //
+@import "_footer";
+
+
+
+
+
+//*                                    //
+body {
+   font-family: 'Poppins', sans-serif;
+   // font-family: 'Inter', sans-serif;
+   // font-family: 'Montserrat', sans-serif;
+}
+.wrapper {
+   min-height: 100vh;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   max-width: 1440px;
+   margin: 0px auto;
+}
+.content {
+   flex: 1 1 auto;
+}
+// *container                    //
+.container {
+   max-width: 1110px;
+   margin: 0px auto;
+}
+//*                              //
+
+.background{
+   position: relative;
+   &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(179.59deg, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 99.63%);
+      border-radius:0 0 50% 50%/0 0 100% 100%;
+      transform: scaleX(1.5);
+   }
+}
+.background-reverse{
+   position: relative;
+   &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(179.59deg, #ededed 0.35%, rgba(255, 255, 255, 0.0001) 99.63%);
+      border-radius: 0 0 100% 100% /0% 0% 30% 30%;
+      transform: scaleX(1.5);
+      transform: rotate(180deg);
+   }
+}

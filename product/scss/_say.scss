@@ -1,0 +1,80 @@
+.say {
+   padding: 150px 10px 0px 10px;
+   @media (max-width: 920px) {
+      padding: 40px 10px 0px 10px;
+   }
+}
+.say__block-text {
+   text-align: center;
+   color: #22343D;
+   max-width: 600px;
+   margin: 0px auto;
+}
+.say__title {
+   margin: 0px 0px 8px 0px;
+}
+.say__subtitle {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 28px;
+   letter-spacing: 0.2px;
+   margin: 0px 0px 50px 0px;
+   @media (max-width: 920px) {
+      margin: 0px 0px 25px 0px;
+   }
+}
+.say__row {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 -32.5px;
+   @media (max-width: 1150px) {
+      margin: 0 -10px;
+   } 
+}
+.say__column {
+   display: flex;
+   padding: 0 32.5px;
+   flex: 0 1 33.333%;
+   @media (max-width: 1150px) {
+      padding: 0 10px;
+   }
+   @media (max-width: 768px) {
+      flex: 1 0 100%;
+   }
+}
+.say__item {
+   display: flex;
+   flex-direction: column;
+   flex: 1 1 auto;
+   background: #fff;
+   border: 1px solid #DEDEDE;
+   border-radius: 5px;
+   padding: 25px;
+   margin: 0px 0px 20px 0px;
+}
+.say__logo {
+   margin: 0px 0px 16px 0px;
+}
+.say__text {
+   flex: 1 1 auto;
+   color: #737373;
+   font-size: 16px;
+   line-height: 28px;
+   letter-spacing: 0.2px;
+   margin: 0px 0px 16px 0px;
+}
+.say__block-avatar {
+   display: flex;
+}
+.say__avatar {
+   flex: 0 0 50px;
+   margin: 0px 15px 0px 0px;
+}
+.say__column-text {
+   p:first-child{
+      color: #02897A;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+   }
+}

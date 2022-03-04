@@ -1,0 +1,107 @@
+.header {
+   position: relative;
+   z-index: 10;
+   background-color: rgba(81, 108, 129, 1);
+}
+
+.header__row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 10px 30px 10px;
+   @media (max-width: 860px) {
+      flex-direction: column;
+   }
+}
+.header__column {
+display: flex;
+}
+.header__logo {
+   font-weight: 700;
+   @media (max-width: 860px) {
+      margin: 0px 0px 15px 0px;
+   }
+   font-size: 35px;
+   text-transform: uppercase;
+   span{
+      color: #F07F18;
+   }
+}
+.header__list {
+   gap: 60px;
+   display: flex;
+   @media (max-width: 950px) {
+      gap: 30px;
+   }
+   @media (max-width: 860px) {
+      margin: 0px 0px 30px 0px;
+   }
+   @media (max-width: 500px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+   }
+   @media (max-width: 350px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+   }
+}
+.header__link {
+   color: #fff;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 20px;
+   &:hover{
+      text-decoration: underline;
+   }
+}
+.header__button {
+}
+.header__btn {
+   font-weight: 500;
+   position: relative;
+   color: #fff;
+   border: 1px solid #fff;
+   padding: 14px 17px;
+   transition: 0.5s;
+   &:hover{
+      background-color: rgba(240, 248, 255, 0.199);
+   }
+   
+   &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 11%;
+      width: 10px;
+      height: 46px;
+      background-color: aliceblue;
+      animation: btn 1.5s linear infinite;
+      transform: skew(45deg);
+   }
+}
+@keyframes btn {
+   0%{
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 13%;
+         width: 10px;
+         height: 46px;
+         background-color: rgba(240, 248, 255, 0.233);
+         transform: skew(45deg);
+   }
+   100%{
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 80%;
+         width: 10px;
+         height: 46px;
+         background-color: rgba(86, 111, 133, 0.027);
+         transform: skew(45deg);
+   }
+}

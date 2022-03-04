@@ -1,0 +1,62 @@
+
+//*        tamplate link        //
+%link {
+   display: inline-block;
+   font-weight: 500;
+   font-size: 16px;
+   color: #fff;
+   border: 1px solid #fff;
+   padding: 17px 20px 17px 30px;
+   background: #000;
+   position: relative;
+   transition: 0.5s;
+   &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 11%;
+      width: 10px;
+      height: 48px;
+      background-color: aliceblue;
+      animation: main 1.5s linear infinite;
+      transform: skew(45deg);
+   }
+   &:hover{
+      background-color: rgba(240, 248, 255, 0.199);
+   }
+   &:after{
+      content: "";
+      background: url("../image/arrow.png") 70% 50% no-repeat;
+      padding: 0px 0px 0px 30px;
+      animation: grow 0.5s linear infinite alternate;
+   }
+}
+//*        tamplate link        //
+
+   @keyframes main {
+      0%{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 13%;
+            width: 10px;
+            height: 53px;
+            background-color: rgba(240, 248, 255, 0.233);
+            transform: skew(45deg);
+      }
+      100%{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 80%;
+            width: 10px;
+            height: 53px;
+            background-color: rgba(86, 111, 133, 0.027);
+            transform: skew(45deg);
+      }
+   }
+   @keyframes grow {
+      100%{
+         background: url("../image/arrow.png") 90% 50% no-repeat;
+      }
+   }

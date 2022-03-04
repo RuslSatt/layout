@@ -1,0 +1,69 @@
+//? zero style                                             //
+@import "_style";
+//? adaptive fonts                                         //
+@import "_mixin-code";
+//? fonts                                                  //
+@import "_fonts";
+//? sample                                                 //
+@import "_code-template";
+//? header                                                 //
+@import "_header";
+//? screen                                                 //
+@import "_screen";
+//? for a company                                                 //
+@import "_for-company";
+//? long                                                 //
+@import "_long";
+//? long-work                                                 //
+@import "_long-work";
+//? gallery                                                 //
+@import "_gallery";
+//? catalog                                                 //
+@import "_catalog";
+//? logo                                                 //
+@import "_logo";
+//? form                                                 //
+@import "_form";
+//? footer                                                 //
+@import "_footer";
+
+//*                                    //
+body {
+   font-family: "Montserrat", sans-serif;
+   //font-family: 'Playfair Display', serif;
+   //font-family: 'Ubuntu', sans-serif;
+}
+.wrapper {
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   max-width: 1920px;
+   margin: 0px auto;
+}
+.content {
+   flex: 1 1 auto;
+}
+// *container                    //
+.container {
+   max-width: 1240px;
+   margin: 0px auto;
+}
+//*                              //
+.block-header {
+   min-height: 100vh;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+//*    for-a-company-2                          //
+.company-2 {
+   background: rgba(39, 57, 71, 1);
+   padding: 116px 10px 0px 10px;
+   @media (max-width: 768px) {
+      padding: 40px 10px 0px 10px;
+   }
+}
+.image-for-company-2 {
+   margin: 23px 0 20px 20px;
+}
+//*                              //

@@ -1,0 +1,93 @@
+.footer {
+   background: rgba(5, 3, 14, 1);
+   padding: 52px 0px 52px 0px;
+   z-index: 1;
+   @media (max-width: $mW3) {
+      padding: 30px 0px 30px 0px;
+   }
+}
+.footer__container {
+}
+
+.footer__title {
+   text-align: center;
+   margin: 0px 0px 50px 0px;
+   color: #b4f299;
+   font-size: 34px;
+   line-height: 120%;
+   @include adaptive-fonts (34,28);
+   @media (max-width: $mW3) {
+      margin: 0px 0px 20px 0px;
+   }
+   span {
+      color: #b4f299;
+      font-weight: 800;
+      line-height: 120%;
+      font-size: 34px;
+      @include adaptive-fonts (34,20);
+   }
+}
+
+.social {
+   display: flex;
+   justify-content: center;
+   align-items: stretch;
+   flex-wrap: wrap;
+}
+.social__item {
+   flex: 0 0 120px;
+   padding: 22px 0;
+   margin: 0 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-radius: 20px;
+   opacity: 0.5;
+   &:hover{
+      opacity: 1;
+      position: relative;
+      background: rgba(5, 3, 14, 1);
+      &::before{
+         content: "";
+         position: absolute;
+         top: -0.1em;
+         left: -0.1em;
+         height: calc(100% + 0.2em);
+         width: calc(100% + 0.2em);
+         background: linear-gradient(to left top,#8AF9AD 5%,transparent 100%, transparent 70%, #8AF9AD 90%);
+         border-radius: 20px;
+         z-index: -1;
+      }
+   }
+}
+.icon-telegram {
+   text-shadow: 0px 24px 64px rgba(138, 249, 173, 0.3);
+   margin: 0px 0px 17px 0px;
+   font-size: 35px;
+   color: rgba(226, 246, 133, 1);
+}
+.social__text {
+   flex: 1 1 auto;
+   text-align: center;
+   text-shadow: 0px 24px 64px rgba(138, 249, 173, 0.3);
+   color: #ffffff;
+   text-transform: uppercase;
+   line-height: 20px;
+   font-weight: bold;
+}
+.icon-youtube {
+   margin: 0px 0px 17px 0px;
+   font-size: 35px;
+   color: rgba(226, 246, 133, 1);
+}
+.icon-twitter {
+   margin: 0px 0px 17px 0px;
+   font-size: 35px;
+   color: rgba(226, 246, 133, 1);
+}
+.icon-medium {
+   margin: 0px 0px 17px 0px;
+   font-size: 35px;
+   color: rgba(226, 246, 133, 1);
+}

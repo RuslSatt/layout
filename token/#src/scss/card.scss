@@ -1,0 +1,164 @@
+.card {
+   background: rgba(5, 3, 14, 1);
+   position: relative;
+   z-index: 100;
+
+}
+.card__container {
+}
+
+.card__row {
+   padding: 0px 0 50px 0;
+   display: flex;
+   align-items: stretch;
+   justify-content: center;
+   gap: 30px;
+   flex-wrap: wrap;
+   @media (max-width: 1150px) {
+      gap: 15px;
+      padding: 40px 0 40px 0;
+   }
+   @media (max-width: $mW3) {
+      overflow: auto;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+   }
+}
+.card__column{
+   display: flex;
+   flex: 0 1 23%;
+   transition: 0.5s;
+   &:hover{
+      transform: translateY(-30px);
+   }
+   @media (max-width: $mW2) {
+      flex: 0 1 48%;
+   }
+   @media (max-width: $mW3) {
+      flex: 0 0 85%;
+   }
+}
+.card__item {
+   display: block;
+   padding: 50px 60px;
+   @media (max-width: 1270px) {
+      padding: 30px 25px;
+   }
+   border-radius: 20px;
+   flex: 1 1 auto;
+   @media (max-width: $mW3) {
+      margin: 0 0 0 10px;
+   }
+   position: relative;
+   background: rgba(5, 3, 14, 1);
+   transition: 0.5s;
+   &::before {
+      content: "";
+      position: absolute;
+      top: -0.2em;
+      left: -0.2em;
+      height: calc(100% + 0.3em);
+      width: calc(100% + 0.3em);
+      background: linear-gradient(to left top, #8af9ad 5%, transparent 100%, transparent 70%, #8af9ad 90%);
+      border-radius: 20px;
+      z-index: -1;
+   }
+   &:hover{
+      
+      .icon-tron{
+         background: linear-gradient(139.33deg, #bbc423 -14.59%, #e99a3d 99.86%);
+         color: #fff;
+      }
+      .icon-lottery{
+         background: linear-gradient(139.33deg, #bbc423 -14.59%, #e99a3d 99.86%);
+         color: #fff;
+      }
+      .icon-stake{
+         background: linear-gradient(139.33deg, #bbc423 -14.59%, #e99a3d 99.86%);
+         color: #fff;
+      }
+      .icon-cain{
+         background: linear-gradient(139.33deg, #bbc423 -14.59%, #e99a3d 99.86%);
+         color: #fff;
+      }
+      .card__title{
+         color: rgba(227, 247, 132, 1);
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         top: -0.2em;
+         left: -0.2em;
+         height: calc(100% + 0.3em);
+         width: calc(100% + 0.3em);
+         background: rgba(227, 247, 132, 1);
+         border-radius: 20px;
+         z-index: -1;
+      }
+      box-shadow: 0px 34px 74px rgba(162, 220, 137, 0.2);
+   }
+}
+.card__title {
+   display: flex;
+   align-items: center;
+   color: #ffffff;
+   font-size: 16px;
+   line-height: 143%;
+   text-transform: uppercase;
+   font-weight: bold;
+   margin: 0px 0px 52px 0px;
+   p {
+      padding: 0 0 0 20px;
+   }
+}
+
+.card__text {
+   color: #ffffff;
+   font-weight: 500;
+   line-height: 164%;
+}
+.icon-tron {
+   flex: 0 0 58px;
+   height: 58px;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   border: 1px solid #37583c;
+   border-radius: 10px;
+   font-size: 37px;
+   color: rgba(226, 246, 133, 1);
+   
+}
+.icon-lottery {
+   flex: 0 0 58px;
+   height: 58px;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   border: 1px solid #37583c;
+   border-radius: 10px;
+   font-size: 37px;
+   color: rgba(226, 246, 133, 1);
+}
+.icon-stake {
+   flex: 0 0 58px;
+   height: 58px;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   border: 1px solid #37583c;
+   border-radius: 10px;
+   font-size: 37px;
+   color: rgba(226, 246, 133, 1);
+}
+.icon-cain {
+   flex: 0 0 58px;
+   height: 58px;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   border: 1px solid #37583c;
+   border-radius: 10px;
+   font-size: 37px;
+   color: rgba(226, 246, 133, 1);
+}

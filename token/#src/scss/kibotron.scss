@@ -1,0 +1,222 @@
+.kibotron {
+   background: rgba(5, 3, 14, 1);
+   padding: 70px 0 50px 0;
+   position: relative;
+   z-index: 1;
+}
+.kibotron__container {
+   @media (max-width: $mW1) {
+      padding: 0 10px;
+   }
+   display: flex;
+   @media (max-width: 900px) {
+      flex-wrap: wrap;
+   }
+}
+.kibotron__absolute {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   flex: 1 1 auto;
+   margin: -200px 0px 0px 0px;
+   @media (max-width: 1370px) {
+      margin: 0px 0px 0px 0px;
+   }
+}
+.kibotron__word{
+   box-shadow: 0px 14px 34px rgba(140, 249, 172, 0.4);
+   font-size: 105px;
+   color: rgba(69, 121, 245, 1);
+   padding: 60px 70px 60px 70px;
+   border: 1px solid rgba(162, 220, 137, 0.35);
+   border-radius: 50%;
+   position: relative;
+   z-index: 100;
+   &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: -60px;
+      left: -60px;
+      width: 150%;
+      height: 150%;
+      border: 1px solid rgba(162, 220, 137, 0.35);
+      border-radius: 50%;
+   }
+   &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: -300px;
+      left: -350px;
+      width: 400%;
+      height: 400%;
+      border: 1px solid rgba(162, 220, 137, 0.35);
+      border-radius: 50%;
+      @media (max-width: 1024px) {
+         top: -170px;
+         left: -170px;
+         width: 250%;
+         height: 250%;
+      }
+   }
+}
+
+.icon-sphere-blue {
+   color:rgba(16, 222, 188, 1);
+   font-size: 50px;
+   text-shadow: 0px 14px 43px #4589E7;
+   position: absolute;
+   top: 30%;
+   left: 30%;
+   @media (max-width: 1243px) {
+      top: 24%;
+      left: 30%;
+   }
+   @media (max-width: 900px) {
+      top: 24px;
+      left: 150px;
+      width: 100%;
+      height: 100%;
+   }
+}
+.icon-sphere-green-1 {
+   text-shadow: 0px 14px 42px #92D176;
+   color: rgba(201, 234, 119, 1);
+   font-size: 20px;
+   position: absolute;
+   top: 50%;
+   left: 64.5%;
+   @media (max-width: 1243px) {
+      top: 50%;
+      left: 93%;
+   }
+   @media (max-width: 900px) {
+      top: 270px;
+      left: 55px;
+      width: 100%;
+      height: 100%;
+   }
+}
+.icon-sphere-green-2 {
+   text-shadow: 0px 14px 42px #92D176;
+   color: rgba(201, 234, 119, 1);
+   font-size: 35px;
+   position: absolute;
+   top: 100%;
+   left: 5%;
+   @media (max-width: 1243px) {
+      top: 75%;
+      left: 5%;
+   }
+   @media (max-width: 900px) {
+      display: none;
+   }
+}
+.kibotron__card {
+   flex: 0 1 50%;
+   @media (max-width: 1243px) {
+      flex: 0 1 80%;
+   }
+   @media (max-width: 900px) {
+      flex: 0 1 100%;
+      overflow: auto;
+      padding: 70px 0 0 0;
+   }
+}
+.kibotron__title {
+   line-height: 150%;
+   font-size: 48px;
+   font-weight: 800;
+   margin: 0px 0px 30px 0px;
+   @media (max-width: 900px) {
+      margin: 0px 0px 30px 0px;
+      text-align: center;
+   }
+}
+.icon-kibotron {
+   color: rgba(69, 121, 245, 1);
+}
+.kibotron__columns{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+   @media (max-width: $mW1) {
+      justify-content: flex-end;
+   }
+   @media (max-width: 900px) {
+      flex-wrap: nowrap;
+      overflow: auto;
+      justify-content: flex-start;
+      padding: 20px 0 20px 30px;
+   }
+}
+.kibotron__column {
+   flex: 0 1 45%;
+   display: flex;
+   @media (max-width: 900px) {
+      flex: 0 0 20%;
+   }
+
+}
+.kibotron__item{
+   padding: 50px 40px;
+   position: relative;
+   background: rgba(5, 3, 14, 1);
+   border-radius: 20px;
+   &::before{
+      content: "";
+      position: absolute;
+      top: -0.1em;
+      left: -0.1em;
+      height: calc(100% + 0.2em);
+      width: calc(100% + 0.2em);
+      background: linear-gradient(to left top,#8AF9AD 5%,transparent 100%, transparent 70%, #8AF9AD 90%);
+      border-radius: 20px;
+      z-index: -1;
+   }
+}
+.kibotron__item-title{
+   color: rgba(69, 121, 245, 1);
+   text-transform: uppercase;
+   font-weight: bold;
+   line-height: 20px;
+   margin: 0px 0px 25px 0px;
+   padding: 0 0 0 70px;
+   text-align: left;
+   background: url("../img/bg-1.png") left no-repeat;
+}
+.item-title-2{
+   background: url("../img/bg-2.png") left no-repeat;
+}
+.item-title-3{
+   background: url("../img/bg-3.png") left no-repeat;
+}
+.item-title-4{
+   background: url("../img/bg-4.png") left no-repeat;
+}
+.kibotron__text {
+   text-align: left;
+   padding: 0 0 0 70px;
+   font-size: 12px;
+   line-height: 20px;
+}
+.kibotron__bottom-block {
+   text-align: center;
+   max-width: 800px;
+   margin: 0px auto;
+   padding: 150px 0 0 0;
+   @media (max-width: 900px) {
+      padding: 50px 30px 0 30px;
+   }
+}
+.kibotron__bottom-text {
+   font-weight: bold;
+   font-size: 24px;
+   line-height: 29px;
+}
+

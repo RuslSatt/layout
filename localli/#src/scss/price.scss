@@ -1,0 +1,35 @@
+.price {
+   background: #FAFAFA;
+   padding: 70px 0px;
+   @media (max-width: 768px) {
+      padding: 30px 0;
+   }
+}
+
+.price__row {
+   display: flex;
+   gap: 30px;
+   @media (max-width: 768px) {
+      flex-direction: column;
+   }
+}
+.price__block-image {
+   flex: 0 1 41%;
+}
+.price__image {
+      display: flex;
+      justify-content: center;
+   img{
+      max-width: 100%;
+   }
+}
+.price__block-text {
+   align-self: center;
+   flex: 0 1 50%;
+   @media (max-width: 768px) {
+      text-align: center;
+   }
+}
+.price__title {
+   margin: 0px 0px 15px 0px;
+}

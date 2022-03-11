@@ -1,0 +1,32 @@
+.map {
+   padding: 50px 0 100px 0;
+}
+.map__container {
+}
+
+.map__block-text {
+   text-align: center;
+   *:last-child{
+      margin-bottom: 0;
+   }
+}
+.map__title {
+   margin: 0px 0px 23px 0px;
+}
+
+.map__subtitle {
+   margin: 0px 0px 25px 0px;
+   p:first-child{
+      margin: 0px 0px 12px 0px;
+   }
+}
+
+.map__block-iamge {
+   max-width: 1028px;
+   margin: 0px auto;
+}
+.map__image {
+   img{
+   max-width: 100%;
+   }
+}

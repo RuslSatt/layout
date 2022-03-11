@@ -1,0 +1,33 @@
+.list {
+   padding: 30px 0px 90px 0px;
+   @media (max-width: 768px) {
+      padding: 30px 0px 30px 0px;
+   }
+}
+
+.list__title {
+   text-align: center;
+   margin: 0 0 70px 0;
+}
+
+.list__block-list {
+   max-width: 750px;
+   margin: 0px auto;
+}
+.list__link {
+   display: flex;
+   border-bottom: 1px solid #000;
+   margin: 0px 0px 18px 0px;
+   padding: 0px 0px 20px 0px;
+}
+.list__link-text {
+   display: inline-block;
+   color: #000000;
+   font-size: 20px;
+   line-height: 150%;
+   flex: 1 1 auto;
+}
+.list__link-arrow {
+   display: flex;
+   align-items: center;
+}

@@ -1,0 +1,51 @@
+//===============ibg===============//
+.ibg {
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+.ibg img {
+   width: 0;
+   height: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+}
+//===============ibg===============//
+//===============title===============//
+.title {
+   font-size: 61px;
+   line-height: 119.6%;
+   @include adaptive-fonts(61, 24);
+}
+//===============title===============//
+//===============subtitle===============//
+.subtitle {
+   color: #212529;
+   font-size: 16px;
+   line-height: 150%;
+}
+//===============subtitle===============//
+//==========buttons=====================//
+.btn {
+   color: #fff;
+   font-size: 15px;
+   line-height: 19px;
+   text-align: center;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   padding: 11px 32px;
+   background: #000000;
+   border: 2px solid #000000;
+   border-radius: 25px;
+   transition: 0.3s;
+   &:hover {
+      transform: scale(1.05);
+   }
+}
+//==========buttons=====================//

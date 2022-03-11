@@ -1,0 +1,28 @@
+
+.header__head {
+   min-height: 93px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0px 15px 0px 0px;
+   @media (max-width: 550px) {
+      flex-direction: column;
+      padding: 0px 0px 0px 0px;
+   }
+}
+.header__menu{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   @media (max-width: 500px) {
+      flex-direction: column;
+   }
+}
+.header__logo{
+   @media (max-width: 550px) {
+      margin: 10px 0px 10px 0px;
+   }
+}
+
+

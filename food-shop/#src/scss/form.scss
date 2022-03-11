@@ -1,0 +1,27 @@
+//==========input============//
+
+//==========input============//
+//==========buttons============//
+.button{
+   display: inline-flex;
+}
+.btn{
+   background: #FF7400;
+   color: #FFFFFF;
+   line-height: 19px;
+   font-weight: bold;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 19px;
+   min-height: 47px;
+   font-family: Open Sans;
+   transition: 0.3s;
+   &:hover{
+      background: #00ff88ab;
+   }
+}
+.menu__btn {
+   padding: 0 60px;
+}
+//==========buttons============//

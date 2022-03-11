@@ -1,0 +1,57 @@
+//==============Адаптивный шрифт=================================================//
+//$maxWidthFz: 1440;
+
+//@mixin adaptive-fonts($pcSize, $mobSize) {
+//$addSize: $pcSize - $mobSize;
+//$addMobSize: $addSize + $addSize * 0.7;
+//@media (max-width: 767px) {
+//font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidthFz}));
+//}
+//@media (min-width: 767px) {
+//font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidthFz}));
+//}
+//}
+//==============Подключения шрифтов Галп==================================================//
+@mixin font($font_name, $file_name, $weight, $style) {
+   @font-face {
+      font-family: $font_name;
+      font-display: swap;
+      src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
+}
+//==============Подключения шрифтов Галп==================================================//
+//==============Адаптивное свойство=======================================================//
+$maxWidthAv: 90; // 1440 / 16 = 90rem
+$maxWidthContainerAv: 81.875; // 1310 / 16 = 81.875rem
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+   $addSize: $startSize - $minSize;
+   @if $type==1rem {
+      // Меньше контейнера //
+      #{$property}: $startSize + rem;
+      @media (max-width: #{$maxWidthContainerAv + rem}) {
+         #{$property}: calc(#{$minSize + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidthContainerAv - 20}));
+      }
+   } @else if $type==1em {
+      // Меньше контейнера //
+      #{$property}: $startSize + em;
+      @media (max-width: #{$maxWidthContainerAv + em}) {
+         #{$property}: calc(#{$minSize + em} + #{$addSize} * ((100vw - 20em) / #{$maxWidthContainerAv - 20}));
+      }
+   } @else if $type==2 {
+      // Больше контейнера //
+      #{$property}: $startSize + rem;
+      @media (min-width: #{$maxWidthContainerAv + rem}) {
+         #{$property}: calc(#{$minSize + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidthAv - 20}));
+      }
+   } @else if $type==3rem {
+      // В любом случае //
+      #{$property}: calc(#{$minSize + rem} + #{$addSize} * ((100vw - 20rem) / #{$maxWidthAv - 20}));
+   } @else if $type==3em {
+      // В любом случае //
+      #{$property}: calc(#{$minSize + em} + #{$addSize} * ((100vw - 20em) / #{$maxWidthAv - 20}));
+   }
+}
+//==============Адаптивное свойство=======================================================//

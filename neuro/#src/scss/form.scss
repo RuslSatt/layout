@@ -1,0 +1,116 @@
+//==========input============//
+
+//==========input============//
+//==========buttons============//
+//==========main and footer===========//
+.button{
+   display: flex;
+}
+.btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 6.43rem;
+   min-height: 3.25rem;
+   background: #000000;
+   border-radius: 2px;
+   color: #fff;
+   text-transform: uppercase;
+   transition: color 0.5s;
+   position: relative;
+   z-index: 1;
+   &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      clip-path: inset(0 0 100% 0);
+      transition: 0.5s;
+      z-index: -1;
+      border-radius: 2px;
+   }
+   &:hover{
+      color: rgb(0, 0, 0);
+      &::before{
+         content: "";
+         clip-path: inset(0 0 0 0);
+         
+      }
+   }
+}
+// =======modification===============//
+.btn-opacity{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 6.43rem;
+   min-height: 3.25rem;
+   background: #FFFFFF;
+   border: 2px solid #000000;
+   color: #000000;
+   text-transform: uppercase;
+   transition: color 0.5s;
+   position: relative;
+   z-index: 1;
+   &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000000;
+      clip-path: inset(0 0 0 100%);
+      transition: 0.5s;
+      z-index: -1;
+   }
+   &:hover{
+      color: #fff;
+      &::before{
+         content: "";
+         clip-path: inset(0 0 0 0);
+      }
+   }
+}
+// =======modification===============//
+//==========main and footer===========//
+//==========buttons============//
+.second{
+   display: inline-flex;
+}
+.second-btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #000000;
+   text-transform: uppercase;
+   font-size: 16px;
+   line-height: 1;
+   padding: 0.5rem 1rem 0.5rem 0;
+   border-bottom: 2px solid #000000;
+   transition: color 0.5s;
+   position: relative;
+   z-index: 1;
+   &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000000;
+      clip-path: inset(0 0 0 100%);
+      transition: 0.5s;
+      z-index: -1;
+   }
+   &:hover{
+      color: #fff;
+      &::before{
+         content: "";
+         clip-path: inset(0 0 0 0);
+      }
+   }
+}

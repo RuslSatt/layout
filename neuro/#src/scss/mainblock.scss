@@ -1,0 +1,140 @@
+.mainblock {
+   position: relative;
+   padding: 96px 0 50px 0;
+   margin: 0px 0px 189px 0px;
+   @media (max-width: $mW2) {
+      margin: 0 0 50px 0;
+   }
+}
+.mainblock__container {
+   position: relative;
+   z-index: 2;
+}
+
+.mainblock__content {
+   *:last-child{
+      margin-bottom: 0;
+   }
+   padding: 0 0 0 3.125rem;
+   @media (max-width: 34.375em) {
+      padding: 0 0 0 0rem;
+   }
+}
+.content {
+   max-width: 23.75rem;
+}
+.content__title {
+   font-weight: bold;
+   font-size: 3.4375rem;
+   line-height: 1.09;
+   margin: 0px 0px 1.5rem 0px;
+   color: #fff;
+   @include adaptiv-value ("font-size", 3.4375, 3, 1rem);
+}
+.content__subtitle {
+   color: #fff;
+   font-size: 1.25rem;
+   line-height: 1.5;
+   margin: 0px 0px 1.5rem 0px;
+}
+.content__button {
+   @media (max-width: $mW4) {
+      display: flex;
+   }
+}
+.content__link {
+   @media (max-width: $mW4) {
+      flex: 1 1 auto;
+   }
+}
+.mainblock__footer {
+   position: relative;
+   z-index: 2;
+   margin: 15rem 0 0 0;
+   padding: 1rem 1.875rem;
+   @media (max-width: $mW2) {
+      margin: 5rem 0 0 0;
+   }
+}
+.footer-mainblock {
+   background: #000;
+   color: #fff;
+   display: flex;
+   min-height: 4.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   @media (max-width: 34.375em) {
+      flex-wrap: wrap;
+   }
+}
+.footer-mainblock__text {
+   font-size: 16px;
+   line-height: 1.5;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   margin: 0 0.5rem 0 0;
+   p{
+      margin: 0 1rem 0 0;
+   }
+   a{
+      &:hover{
+         text-decoration: underline;
+      }
+   }
+   @media (max-width: 34.375em) {
+      margin: 0 0 1rem 0;
+   }
+}
+.footer-mainblock__link {
+   color: inherit;
+}
+.footer-mainblock__button {
+   display: inline-flex;
+   flex: 0 0 175px;
+
+}
+.footer-mainblock__btn {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: inherit;
+   padding: 0rem 4rem;
+   min-height: 2.5rem;
+   background: #FFFFFF;
+   border-radius: 5px;
+   color: #000;
+   transition: 0.5s;
+   position: relative;
+   z-index: 3;
+   &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 101%;
+      height: 101%;
+      background: #000000;
+      clip-path: inset(0 0 0 100%);
+      border-radius: 3px;
+      transition: 0.5s;
+      z-index: -1;
+   }
+   &:hover{
+      color: #fff;
+      &::before{
+         content: "";
+         clip-path: inset(0 0 0 0);
+      }
+   }
+}
+.mainblock__screen {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}

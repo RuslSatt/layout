@@ -1,0 +1,146 @@
+.ideal {
+   background: #fff;
+   padding: 10.5rem 0 11.8rem 0;
+   position: relative;
+   @media (max-width: $mW3) {
+      padding: 7rem 0 7rem 0;
+   }
+   @media (min-width: $mW3) {
+      min-height: 100vh;
+   }
+}
+.ideal-first{
+   background: #F1FAF6;
+
+}
+.text-first{
+   @media (max-width: $mW3) {
+      color: #fff;
+   }
+}
+.text-title{
+   @media (max-width: $mW3) {
+      color: #fff;
+   }
+}
+.ideal-second{
+   background: #FCF2F0;
+   @media (max-width: $mW4) {
+      padding: 5rem 0 5rem 0;
+   }
+}
+.ideal-second__container{
+   display: flex;
+   align-items: center;
+   gap: 160px;
+   min-height: 50vh;
+   @media (max-width: $mW1) {
+      gap: 100px;
+   }
+   @media (max-width: $mW3) {
+      flex-wrap: wrap-reverse;
+   }
+}
+.ideal-three{
+   background: #64BAA1;
+   @media (min-width: $mW3) {
+      min-height: none;
+   }
+}
+.ideal__image-three{
+   margin: -25rem 0 0 0;
+}
+.ideal-three__container{
+   
+   @media (max-width: $mW3) {
+      flex-wrap: wrap;
+   }
+}
+.ideal__container {
+   display: flex;
+   align-items: center;
+   gap: 160px;
+   min-height: 50vh;
+}
+.ideal__image-second{
+   flex: 0 1 50%;
+   margin: 0 0 0 -5rem;
+   img{
+      max-width: 100%;
+   }
+   @media (max-width: $mW1) {
+      margin: 0 0 0 -0.75rem;
+   }
+   @media (max-width: $mW3) {
+      flex: 0 1 100%;
+   }
+}
+.ideal__image {
+   flex: 0 1 50%;
+   padding: 0 0 45% 0;
+   @media (max-width: $mW3) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      &::before {
+         content: "";
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         position: absolute;
+         background-color: rgba(0, 0, 0, 0.459);
+         z-index: 1;
+      }
+   }
+}
+.ideal__text {
+   position: relative;
+   z-index: 5;
+   flex: 0 1 50%;
+   @media (max-width: $mW3) {
+      flex: 1 1 auto;
+   }
+}
+
+
+.ideal__subtitle {
+   margin: 0px 0px 1.56rem 0px;
+}
+
+
+.ideal__btn {
+   border: 2px solid #000000;
+   background: #fff;
+   transition: color 0.5s;
+   position: relative;
+   z-index: 1;
+   color: #000;
+   &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 101%;
+      height: 101%;
+      background: rgb(0, 0, 0);
+      clip-path: inset(0 0 100% 0);
+      transition: 0.5s;
+      z-index: -1;
+      border-radius: 0px;
+   }
+   &:hover{
+      color: rgb(255, 255, 255);
+      &::before{
+         content: "";
+         clip-path: inset(0 0 0 0);
+         
+      }
+   }
+   @media (max-width: $mW4) {
+      flex: 1 1 auto;
+   }
+}

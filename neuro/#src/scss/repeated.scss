@@ -1,0 +1,35 @@
+//===============ibg===============//
+.ibg {
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+.ibg img {
+   width: 0;
+   height: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+}
+//===============ibg===============//
+//===============title===============//
+.title{
+   color: #000000;
+   font-size: 2.5rem;
+   line-height: 1.15;
+   font-weight: bold;
+   @include adaptiv-value ("font-size", 2.5, 2, 1rem);
+   margin: 0px 0px 25px 0px;
+}
+//===============title===============//
+//===============subtitle===============//
+.subtitle{
+   font-size: 1.25rem;
+   line-height: 1.55;
+}
+//===============subtitle===============//
+

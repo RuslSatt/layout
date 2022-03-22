@@ -1,0 +1,34 @@
+@import "style";
+@import "mixin-code";
+@import "fonts";
+@import "code-template";
+@import "header";
+@import "screen";
+@import "tabs";
+@import "image-one";
+@import "block-text";
+@import "swiper-shop";
+@import "block-text-2";
+@import "form";
+@import "footer";
+
+body {
+   font-family: "Roboto", sans-serif;
+}
+.allbirds {
+   min-height: 100vh;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   max-width: 1440px;
+   margin: 0 auto;
+}
+.content {
+   flex: 1 1 auto;
+}
+
+.container {
+   max-width: 1240px;
+   margin: 0 auto;
+}
+

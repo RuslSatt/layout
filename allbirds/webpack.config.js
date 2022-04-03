@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const { extendDefaultPlugins } = require("svgo");
 
 module.exports = {
    context: path.resolve(__dirname, 'src'),
@@ -13,14 +15,10 @@ module.exports = {
    output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'js/[name].[contenthash].js',
-      assetModuleFilename: './assets/images/[contenthash][ext][query]',
+      assetModuleFilename: 'assets/images/[contenthash][ext][query]',
       clean: true,
    },
-   resolve: {
-      extensions: ['.js', '.json',],
-   },
-   target: ['web', 'es5'],
-   devtool: 'inline-source-map',
+   target: 'web',
    devServer: {
       static: {
          directory: path.resolve(__dirname, 'dist'),
@@ -32,7 +30,7 @@ module.exports = {
    plugins: [
       new HtmlWebpackPlugin({
          filename: "index.html",
-         template: path.resolve(__dirname, 'src', 'index.html'),
+         template: path.resolve(__dirname, 'src/index.html'),
       }),
       new MiniCssExtractPlugin({
          filename: 'css/style.[contenthash].css',
@@ -46,7 +44,25 @@ module.exports = {
          },
          {
             test: /\.s?css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            use: [MiniCssExtractPlugin.loader,
+               'css-loader',
+               'sass-loader',
+               {
+                  loader: "postcss-loader",
+                  options: {
+                     postcssOptions: {
+                        plugins: [
+                           [
+                              "postcss-preset-env",
+                              {
+                                 // Options
+                              },
+                           ],
+                        ],
+                     },
+                  },
+               },
+            ]
          },
          {
             test: /\.(png|jpg|svg)$/,
@@ -82,6 +98,35 @@ module.exports = {
       minimizer: [
          new TerserWebpackPlugin(),
          new CssMinimizerWebpackPlugin(),
+         new ImageMinimizerPlugin ({
+            minimizer: {
+               implementation: ImageMinimizerPlugin.imageminMinify,
+               options: {
+                  plugins: [
+                     ["gifsicle", { interlaced: true }],
+                     ["jpegtran", { progressive: true }],
+                     ["optipng", { optimizationLevel: 5 }],
+                     [
+                        "svgo",
+                        {
+                           plugins: extendDefaultPlugins([
+                              {
+                                 name: "removeViewBox",
+                                 active: false,
+                              },
+                              {
+                                 name: "addAttributesToSVGElement",
+                                 params: {
+                                    attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
+                                 },
+                              },
+                           ]),
+                        },
+                     ],
+                  ],
+               },
+            },
+         }),
       ]
    }
 };

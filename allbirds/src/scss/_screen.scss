@@ -1,17 +1,11 @@
 .screen {
-   margin: 68px 0 0 0;
    position: relative;
    z-index: 5;
    min-height: 20vh;
    display: flex;
-   @media (max-width:500px) {
-      &{
-         margin: 98px 0 0 0;
-      }
-   }
 }
 
-.screen__text {
+.screen__nav {
    min-width: 300px;
    color: #fff;
    position: relative;

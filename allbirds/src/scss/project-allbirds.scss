@@ -12,8 +12,14 @@
 @import "form";
 @import "footer";
 
+html {
+   scroll-behavior: smooth;
+}
 body {
    font-family: "Roboto", sans-serif;
+   &.lock {
+      overflow: hidden;
+   }
 }
 .allbirds {
    min-height: 100vh;

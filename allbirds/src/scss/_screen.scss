@@ -1,31 +1,40 @@
 .screen {
    position: relative;
    z-index: 5;
-   min-height: 20vh;
+   min-height: 50vh;
    display: flex;
 }
 
 .screen__nav {
+   padding: 50px 20px;
    min-width: 300px;
    color: #fff;
    position: relative;
    flex: 1 1 auto;
    display: flex;
-   justify-content: center;
+   justify-content: flex-end;
+   align-items: flex-start;
    flex-direction: column;
    background-color: rgba(0, 0, 0, 0.089);
    z-index: 10;
-   text-align: center;
-}
-.screen__title {
-   font-size: 43px;
-   line-height: 48px;
-   margin: 0 0 12px 0;
-   @include adaptive-fonts (43, 20);
-   @media (max-width:767px) {
-      line-height: 25px;
+   text-align: left;
+   @media (max-width: 768px) {
+      justify-content: center;
+      align-items: center;
    }
 }
+
+.screen__title {
+   font-size: 43px;
+   line-height: 110%;
+   margin: 0 0 12px 0;
+   @include adaptive-fonts (43, 30);
+   @media (max-width:767px) {
+      line-height: 110%;
+      text-align: center;
+   }
+}
+
 .screen__subtitle {
    font-size: 15px;
    line-height: 18px;
@@ -33,34 +42,22 @@
    margin: 0 0 18px 0;
    @include adaptive-fonts (15, 14);
    @media (max-width:767px) {
-      margin: 0 0 10px 0;
+      margin: 0 0 30px 0;
    }
 }
+
+.screen__button {
+   display: flex;
+   gap: 20px;
+   @media (max-width: 450px) {
+      flex-direction: column;
+   }
+}
+
 .screen__link {
-   font-size: 13px;
-   letter-spacing: 1.4px;
-   line-height: 15px;
+   @extend %link-screen;
 }
-.screen__link-more {
-   padding: 10px;
-   transition: 0.5s;
-   color: #fff;
-   display: inline-block;
-   animation: link-more 0.8s infinite alternate linear;
-   position: relative;
-   &:hover{
-      background-color: rgba(0, 255, 255, 0.185);
-      border-radius: 10px;
-   }
-   &:active{
-      background-color: rgba(0, 255, 13, 0.185);
-   }
-}
-@keyframes link-more {
-   100%{
-      transform: scale(1.1, 1.1);
-   }
-}
+
 .screen__image {
    padding: 0 0 40% 0;
    &:before{
